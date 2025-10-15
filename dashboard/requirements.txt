@@ -1,0 +1,6 @@
+streamlit==1.28.0
+plotly==5.15.0
+pandas==2.0.3
+aiohttp==3.8.5
+redis==5.0.1
+requests==2.31.0

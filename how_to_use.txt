@@ -1,0 +1,30 @@
+# 1. Make deploy script executable
+chmod +x deploy.sh
+
+# 2. Deploy everything
+./deploy.sh
+
+# 3. Or run manually
+docker-compose up -d
+
+# 4. Check logs
+docker-compose logs -f
+
+# 5. Stop services
+docker-compose down
+
+
+
+how to deploy:
+#!/bin/bash
+
+echo "🚀 Deploying GitHub Analytics Dashboard..."
+
+# Build and start services
+docker-compose down
+docker-compose up -d --build
+
+echo "✅ Services deployed!"
+echo "📊 Dashboard: http://localhost:8501"
+echo "🔌 API: http://localhost:8000"
+echo "📚 API Docs: http://localhost:8000/docs"
